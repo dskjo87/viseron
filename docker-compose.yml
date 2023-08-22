@@ -9,5 +9,5 @@ services:
       - {config path}:/config
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - 8888:8888
+      - 8888:14444
     runtime: nvidia

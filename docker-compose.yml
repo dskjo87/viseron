@@ -1,0 +1,13 @@
+version: "2.4"
+
+services:
+  viseron:
+    image: roflcoopter/amd64-cuda-viseron:latest
+    container_name: viseron
+    volumes:
+      - {recordings path}:/recordings
+      - {config path}:/config
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8888:8888
+    runtime: nvidia
